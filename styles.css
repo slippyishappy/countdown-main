@@ -66,6 +66,14 @@ p {
 }*/
 
 .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: var(--pink);
     font-size: 4em;
+    background-color: var(--dark-blue-bottom);
+    width: 138px;
+    height: 118px;
 }
+
