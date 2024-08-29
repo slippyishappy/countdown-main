@@ -4,20 +4,18 @@ This is a solution to the [Launch countdown timer challenge on Frontend Mentor](
 
 ### The challenge
 
-Users should be able to:
+The coders should be able to:
 
 - See hover states for all interactive elements on the page
-- See a live countdown timer that ticks down every second (start the count at 14 days)
-- **Bonus**: When a number changes, make the card flip from the middle
+- See a live countdown timer that ticks down every second (I made it count until 26 September)
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./desktop-preview.jpg);
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+[Live Site URL](https://slippyishappy.github.io/countdown-main/)
 
 ### Tools
 
