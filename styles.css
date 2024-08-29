@@ -4,7 +4,8 @@
     --pink: hsl(345, 95%, 68%);
     --white: hsl(0, 0%, 100%);
     --light-gray:  hsl(237, 18%, 59%);
-    --dark-blue-top: hsl(235, 16%, 14%);
+    --dark-blue-top: hsl(236, 21%, 20%)    ;
+    --really-dark-blue: hsl(235, 16%, 14%);
     --dark-blue-bottom: hsl(236, 21%, 26%);
     --black: hsl(234, 17%, 12%);
 }
@@ -19,7 +20,7 @@ body {
     height: 100vh;
     font-family: "Red Hat Text", system-ui;
     font-weight: 700;
-    background-color: var(--black);
+    background-color: var(--really-dark-blue);
     text-transform: uppercase;
     font-size: 14px;
     background-image: url(images/bg-stars.svg);
@@ -28,6 +29,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 main {
@@ -41,6 +43,7 @@ h1 {
 }
 
 p {
+    padding: 1.3em;
     color: var(--light-gray);
     letter-spacing: 0.22em;
 }
@@ -68,18 +71,6 @@ p {
     background-size: 100%;
 }
 
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: var(--pink);
-    font-size: 4em;
-    background-color: var(--dark-blue-bottom);
-    width: 138px;
-    height: 118px;
-}
-
 #socials {
     display: flex;
     justify-content: center;
@@ -93,24 +84,38 @@ p {
     filter: invert(54%) sepia(46%) saturate(2853%) hue-rotate(310deg) brightness(101%) contrast(97%);
 }
 
-.card::before, .card::after{
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--pink);
+    font-size: 4em;
+    background: linear-gradient(to top, var(--dark-blue-top), 0%, var(--dark-blue-bottom) 50%, var(--dark-blue-top) 50%);
+    width: 138px;
+    height: 118px;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0px 9px 0px 0px var(--black);
+}
+
+.card::before, .card::after {
     content: '';
-    width: 20px;
-    height: 30px;
-    border-radius: 100%;
-    background-color: var(--black);
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--really-dark-blue);
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
 }
 
 .card::before {
-    border-top-color: transparent;
-    border-left-color: transparent;
-    transform: rotate(90deg);
-  }
-  
+    left: -6px;
+}
+
 .card::after {
-    border-top-color: transparent;
-    border-left-color: transparent;
-    transform: rotate(90deg);
+    right: -6px;
 }
 
 @media only screen and (min-width: 1400px) {
