@@ -27,8 +27,11 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+}
+
+main {
+    padding: 8%;
 }
 
 h1 {
@@ -58,12 +61,12 @@ p {
     align-items: center;
 }
 
-/*#hills {
-    background-image: url(images/pattern-hills.svg);
-    width: 100%;
-    height: 100%;
+#hills {
     background-repeat: no-repeat;
-}*/
+    position: fixed;
+    bottom: 0;
+    background-size: 100%;
+}
 
 .card {
     display: flex;
@@ -77,3 +80,41 @@ p {
     height: 118px;
 }
 
+#socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    position: absolute;
+    bottom: 6%;
+}
+
+#socials a:hover img {
+    filter: invert(54%) sepia(46%) saturate(2853%) hue-rotate(310deg) brightness(101%) contrast(97%);
+}
+
+.card::before, .card::after{
+    content: '';
+    width: 20px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: var(--black);
+}
+
+.card::before {
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(90deg);
+  }
+  
+.card::after {
+    border-top-color: transparent;
+    border-left-color: transparent;
+    transform: rotate(90deg);
+}
+
+@media only screen and (min-width: 1400px) {
+    #hills {
+        width: 100%;
+    }
+}
